@@ -3,17 +3,21 @@ hidupkan server mongodb = sudo service mongodb start
 matikan server mongodb  = sudo service mongodb stop
 Menyalakan ulang server mongodb = sudo service mongodb restart
 Melihat status server mongodb = sudo service mongodb status
+
 note : Gunakan tombol q untuk keluar dari status
+
 ============================
 
 ========== Memulai ==========
 aktifkan dan masuk = mongo
+
 =============================
 
 ========== Memulai ==========
 membuat database = use namadatabase
 melihat database yang aktif = db
 lihat db and storage = show dbs
+
 =============================
 
 ========== membuat collection/table ==========
@@ -21,6 +25,7 @@ db.namatable.insert({"name" : "sammi", "age" : 20})
 lihat collection yang telah dibuat = show collections
 hapus database = db.dropDatabase()
 hapus collection/table = db.namacollection.drop
+
 ==============================================
 
 ==============================================
@@ -29,6 +34,7 @@ buat coolection = db.createCollection('collectionPertama')
 lihat = show collections
 
 cara kedua membuat collection : db.namaTable.insert({"name" : "sammi", "age" : 20})
+
 ==============================================
 
 ============ insert data =====================
@@ -101,10 +107,12 @@ db.studentdata.remove({firstname : "Sam"})
 
 remove umur 15 tapi hanya satu orang:
 db.namaCollect.remove({umur : 15}, 1) 
+
 ============================
 
 ====== Hapus semua data dalam collection ======
 db.namaCollections.remove({})
+
 ===============================================
 
 ======== Drop =================================
@@ -138,6 +146,7 @@ db.namaColl.find({umur : {$gt : 16}}).pretty()
 $ne
 umur != 16
 db.namColl.find({umur : {$ne : 16}}).pretty()
+
 ============================================
 
 ============================================
